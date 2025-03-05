@@ -1,0 +1,48 @@
+#Entrada --> duracao do periodo, data do inicio.
+
+duracao_periodo = int(input("Quantos dias duram seu periodo (em dias) ? Ex.: 28 \n"))
+
+dia_inicio = int(input("Dia inicial: "))
+mes_inicio = int(input("Mes: "))
+
+# Processamento
+
+mes = 31
+
+if mes_inicio == 1 or mes_inicio == 3 or mes_inicio == 5 or mes_inicio == 7:
+    mes = 31
+    mes_ant = 31
+    
+elif mes_inicio == 2:
+    mes = 28
+    mes_ant = 31
+
+elif mes_inicio == 4 or mes_inicio == 6:
+    mes = 30
+
+el
+
+elif mes_inicio == 8:    
+    mes = 31
+elif mes_inicio == 9:    
+    mes = 30
+elif mes_inicio == 10:    
+    mes = 31
+elif mes_inicio == 11:
+    mes = 30
+elif mes_inicio == 12:
+    mes = 31
+else:
+    print("Data invalida...")
+
+dia_fertil = (dia_inicio - 1)+ (duracao_periodo // 2) 
+
+periodo_fertil = str(f"De {dia_fertil -3} a {dia_fertil +3}")
+
+prox_ciclo = dia_inicio + duracao_periodo - mes -1
+
+#Saída --> Dia fértil, período fertil e data da prox menstruacao.
+
+print(f"\nDia fertil: {dia_fertil} / {mes_inicio}")
+print("Periodo fertil:", periodo_fertil)
+print(f"Proxima menstruacao: {prox_ciclo} / {mes_inicio +1}")
